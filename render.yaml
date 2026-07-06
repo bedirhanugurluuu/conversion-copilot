@@ -1,0 +1,25 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: conversion-copilot
+    runtime: docker
+    plan: starter
+    region: frankfurt
+    healthCheckPath: /privacy
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SHOPIFY_APP_URL
+        sync: false
+      - key: SHOPIFY_API_KEY
+        sync: false
+      - key: SHOPIFY_API_SECRET
+        sync: false
+      - key: SCOPES
+        value: read_products,write_products,write_files,read_locales,read_translations,write_translations
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false

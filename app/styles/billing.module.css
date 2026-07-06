@@ -1,0 +1,213 @@
+.billingPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.billingLead {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--p-color-text-secondary, #616161);
+  line-height: 1.5;
+  max-width: 52rem;
+}
+
+.currentUsageCard {
+  padding: 1rem 1.125rem;
+  border: 1px solid var(--p-color-border, #e3e3e3);
+  border-radius: 12px;
+  background: var(--p-color-bg-surface-secondary, #f6f6f7);
+}
+
+.currentUsageHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.currentPlanBadge {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--p-color-text, #303030);
+}
+
+.currentUsageMeta {
+  font-size: 0.8125rem;
+  color: var(--p-color-text-secondary, #616161);
+}
+
+.usageBarTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--p-color-bg-surface, #fff);
+  overflow: hidden;
+}
+
+.usageBarFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #29845a, #47c479);
+  transition: width 0.2s ease;
+}
+
+.usageFootnote {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--p-color-text-secondary, #616161);
+  line-height: 1.45;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.planCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--p-color-border, #e3e3e3);
+  border-radius: 12px;
+  background: var(--p-color-bg-surface, #fff);
+}
+
+.planCardCurrent {
+  border-color: #29845a;
+  box-shadow: 0 0 0 1px #29845a;
+}
+
+.planCardHeader h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.planPrice {
+  margin: 0.25rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--p-color-text, #303030);
+}
+
+.planPriceInterval {
+  margin-left: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--p-color-text-secondary, #616161);
+}
+
+.planCredits {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #29845a;
+}
+
+.planFeatures {
+  margin: 0;
+  padding-left: 1.125rem;
+  flex: 1;
+  font-size: 0.8125rem;
+  color: var(--p-color-text-secondary, #616161);
+  line-height: 1.5;
+}
+
+.planCurrentLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: #e3f1df;
+  color: #29845a;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.planBtnPrimary,
+.planBtnSecondary {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.planBtnPrimary {
+  background: #303030;
+  color: #fff;
+}
+
+.planBtnPrimary:hover {
+  background: #1a1a1a;
+}
+
+.planBtnSecondary {
+  background: #fff;
+  color: #303030;
+  border-color: var(--p-color-border, #c9cccf);
+}
+
+/* Dashboard compact billing card */
+.billingCompactCard {
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--p-color-border, #e3e3e3);
+  border-radius: 12px;
+  background: var(--p-color-bg-surface, #fff);
+}
+
+.billingCompactHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.billingCompactTitle {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--p-color-text, #303030);
+}
+
+.billingCompactLink {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #005bd3;
+  text-decoration: none;
+}
+
+.billingCompactLink:hover {
+  text-decoration: underline;
+}
+
+.billingCompactMeta {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  color: var(--p-color-text-secondary, #616161);
+}
+
+.billingCompactWarning {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: #8a6116;
+  line-height: 1.4;
+}
+
+.billingCompactWarning a {
+  color: #005bd3;
+  font-weight: 600;
+}
