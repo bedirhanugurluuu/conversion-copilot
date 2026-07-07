@@ -17,5 +17,7 @@ RUN npm ci --omit=dev && npm cache clean --force
 COPY prisma ./prisma
 RUN npx prisma generate
 COPY --from=build /app/build ./build
+COPY scripts ./scripts
+RUN chmod +x scripts/docker-start.sh
 EXPOSE 3000
 CMD ["npm", "run", "docker-start"]

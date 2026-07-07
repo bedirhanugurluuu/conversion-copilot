@@ -6,9 +6,12 @@ services:
     plan: starter
     region: frankfurt
     healthCheckPath: /privacy
+    healthCheckGracePeriodSeconds: 180
     envVars:
       - key: NODE_ENV
         value: production
+      - key: HOST
+        value: 0.0.0.0
       - key: SHOPIFY_APP_URL
         sync: false
       - key: SHOPIFY_API_KEY
@@ -18,8 +21,6 @@ services:
       - key: SCOPES
         value: read_products,write_products,write_files,read_locales,read_translations,write_translations
       - key: DATABASE_URL
-        sync: false
-      - key: DIRECT_URL
         sync: false
       - key: OPENAI_API_KEY
         sync: false
